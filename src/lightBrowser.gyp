@@ -1,0 +1,42 @@
+{
+    'targets' : [
+    {
+        'target_name' : 'lightbrowser',
+        'type' : 'shared_library',
+        'cflags': ['-g', '-Wno-narrowing', '-Wsign-compare', '-fno-threadsafe-statics' , '-fvisibility-inlines-hidden', '-fPIC', '-fno-rtti'],
+        'includes' : [
+            './chromium.gyp',
+        ],
+        'sources' : [
+            'BrowserLogger.cpp',
+            'BrowserLoggerFactory.cpp',
+            'BrowserMessageManager.cpp',
+            'BrowserQueueFactory.cpp',
+            'SimpleBrowserQueue.cpp',
+            'BrowserQueueManager.cpp',
+            'BrowserShellProxy.cpp',
+            'BrowserPlatform.cpp',
+            'BrowserTaskMonitor.cpp',
+            'BrowserShell.cpp',
+            'BrowserView.cpp',
+            'BrowserViewDelegate.cpp',
+            'BrowserViewGroupImp.cpp',
+            'BrowserViewRequestContext.cpp',
+            'BrowserViewRequestMonitor.cpp',
+            'BrowserViewRequestProxy.cpp',
+            'WebViewHost.cpp',
+            'platform/BrowserRequestContext.cpp',
+            'platform/BrowserResourceLoaderBridge.cpp',
+            'platform/BrowserWebMimeRegistry.cpp',
+            'platform/BrowserWebStorageNamespace.cpp',
+            '../LightBrowser.cpp',
+        ],
+        'include_dirs' : [
+            '..',
+            '../include',
+            '/usr/include/glib-2.0',
+            '/usr/lib/glib-2.0/include/',
+        ],
+    },
+    ],
+}
